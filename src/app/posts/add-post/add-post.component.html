@@ -1,0 +1,23 @@
+<div class="container">
+  <h3> Add Post</h3>
+  <hr>
+
+  <div class="my-3">
+    <form [formGroup]="addPostForm" (ngSubmit)="onAddPost()">
+      <div class="mb-3">
+        <label>Title</label>&nbsp;
+        <input type="text" formControlName="title">
+      </div>
+
+      <div class="mb-3">
+        <label>Description</label>&nbsp;
+        <input type="text" formControlName="description">
+      </div>
+
+      <div class="btn">
+        <button type="submit" class="btn btn-primary" [disabled]="!this.addPostForm.valid">Add Post</button>
+      </div>
+
+    </form>
+  </div>
+</div>
